@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import DataForm from "./components/DataForm";
+import DataTable from "./components/DataTable";
+import Sidebar from "./components/Sidebar"; // updated Sidebar with icons
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./index.css";
 
 function App() {
+  const [pageView, setPageView] = useState("add"); // default module
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="dashboard">
+      {/* Left Sidebar */}
+      <Sidebar setPageView={setPageView} />
+
+      {/* Right Content */}
+      <div className="main-content">
+        {pageView === "add" && <DataForm />}
+        {pageView === "table" && <DataTable />}
+      </div>
     </div>
   );
 }
