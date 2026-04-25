@@ -1,14 +1,13 @@
 import { useState } from "react";
 import DataForm from "./components/DataForm";
 import DataTable from "./components/DataTable";
-import Sidebar from "./components/Sidebar"; // updated Sidebar with icons
+import Sidebar from "./components/Sidebar"; 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./index.css";
 
 function App() {
-  const [pageView, setPageView] = useState("add"); // default module
-
+  const [pageView, setPageView] = useState("add"); 
   return (
     <div className="dashboard">
       {/* Left Sidebar */}
