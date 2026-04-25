@@ -23,7 +23,7 @@ const DataForm = () => {
           <h4 className="mb-0">Add New Record</h4>
         </div>
         <div className="card-body">
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)}>                   //validated input
             {/* Name */}
             <div className="mb-3">
               <label className="form-label">Name</label>

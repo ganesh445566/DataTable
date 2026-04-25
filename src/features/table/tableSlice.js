@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { dummyData } from "../../data/dummyData";
 
 const tableSlice = createSlice({
-  name: "table",
+  name: "table",                              //addRow reducer
   initialState: {
     data: dummyData,
   },
